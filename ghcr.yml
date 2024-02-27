@@ -1,0 +1,17 @@
+- name: Run the unit tests
+  run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+
+- name: Report
+  uses: dorny/test-reporter@v1
+  if: always()
+  with:
+    name: Maven Tests
+    path: target/surefire-reports/*.xml
+    reporter: java-junit
+    fail-on-error: true
+
+- name: Build and push the image
+  run: |
+    docker login --username alexandermd1023@gmail.com --password ${{secret.ACCESS_TOKEN}} ghcr.io
+    docker build -t ghcr.io/dracon1023/primes-service:latest --file Dockerfile .
+    docker push ghcr.io/dracon1023/primes-service:latest
