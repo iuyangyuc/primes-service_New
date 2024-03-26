@@ -1,3 +1,13 @@
+edu\iu\aldoub\primesservice\repository\AuthenticationFileRepository.class
+edu\iu\aldoub\primesservice\model\Customer.class
+edu\iu\aldoub\primesservice\repository\IAuthenticationRepository.class
+edu\iu\aldoub\primesservice\service\IAuthenticationService.class
+edu\iu\aldoub\primesservice\controller\AuthenticationController.class
 edu\iu\aldoub\primesservice\controller\HomeController.class
+edu\iu\aldoub\primesservice\service\AuthenticationService.class
+edu\iu\aldoub\primesservice\security\SecurityConfig.class
+edu\iu\aldoub\primesservice\service\TokenService.class
 edu\iu\aldoub\primesservice\PrimesServiceApplication.class
+edu\iu\aldoub\primesservice\security\Jwks.class
 edu\iu\aldoub\primesservice\controller\PrimesController.class
+edu\iu\aldoub\primesservice\security\KeyGeneratorUtils.class
