@@ -21,6 +21,6 @@ public class MQSender {
         String message = MessageFormat
                 .format("customer: {0}, n: {1}, isPrime: {2}", username, String.valueOf(n), isPrime);
         message = "{" + message + "}";
-        rabbitTemplate.convertAndSend("primes", message);
+        rabbitTemplate.convertAndSend("prime", message);
     }
 }
